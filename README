@@ -1,0 +1,28 @@
+#仮想環境を作成
+python3 venv ~/venv/hotpepper
+
+#仮想環境をアクティベート
+source /venv/bin/activate
+
+#現環境にインストールされているライブラリ名をrequirements.txtに保存
+pip freeze > requirements.txt
+
+#requirements.txtに記載されているライブラリ名を./python直下に保存
+pip install -r requirements.txt -t ./python
+
+#ライブラリのzip化
+zip -r python.zip ./python
+
+#pythonのレイヤーにzipファイルを登録
+　・Lambdaレイヤーに直接アップロードする場合
+　・S3にzipファイルをアップロードして、オブジェクトURLを参照する場合
+
+#SNSトピックを作成＆自身のメールをサブスクライブ（承認）
+
+#LambdaのIAMロールにAmazon SNSFullAccessのポリシーを追加
+
+
+
+#参考
+https://zenn.dev/ainellc/articles/da2b6ba0f88606
+

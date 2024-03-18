@@ -147,7 +147,7 @@ class HotPepperIntentHandler(AbstractRequestHandler):
         sns_client = boto3.client('sns')
         
         # SNSトピックのARN
-        topic_arn = 'arn:aws:sns:us-east-1:726788541449:my-test-topic'
+        topic_arn = '自身のSNSトピックのARNをここに記載'
         
         # restaurant_datasをJSON文字列に変換
         message = json.dumps({'restaurant_data': restaurant_datas}, ensure_ascii=False)
